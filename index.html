@@ -8,9 +8,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
 
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
-	<link rel="stylesheet" type="text/css" href="css/owl.transitions.css"/>
-	<link rel="stylesheet" type="text/css" href="css/owl.carousel.css"/>
-	<link rel="stylesheet" type="text/css" href="css/animate.css"/>
 	<link rel="stylesheet" type="text/css" href="css/main.css"/>
 
 </head>
@@ -72,7 +69,28 @@
 	<!--  End Hero Section  -->
 
 
-
+	<script>
+		{
+			const head = document.getElementsByTagName('head')[0];
+			async function loadStyles(url){
+				const styles = document.createElement('link');
+				styles.href = url;
+				styles.type = "text/css";
+				styles.rel = "stylesheet";
+				head.appendChild(styles)
+			}
+	
+			const styles = [
+				"css/owl.transitions.css",
+				"css/owl.carousel.css",
+				"css/animate.css",
+			]
+			window.onload = () => {
+				styles.map(loadStyles);
+			}
+		}
+	
+	</script>
 
 
 
@@ -291,7 +309,7 @@
 	<script type="text/javascript" src="js/wow.js"></script>
 	<script type="text/javascript" src="js/parallax.js"></script>
 	<script type="text/javascript" src="js/nicescroll.js"></script>
-	<script type="text/javascript" src="js/scrollTo.js"></script>
+	<!-- <script type="text/javascript" src="js/scrollTo.js"></script> -->
 	<script type="text/javascript" src="js/main.js"></script>
 
 </body>
